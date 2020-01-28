@@ -41,6 +41,26 @@ namespace BubbleSort
                 numbers[i] = random.Next(numbers.Length);
             return numbers;
         }
+        public static void Insertion(int[] lista)
+        {
+            int a, m;
+            int length = lista.Length; if (length < 2) return;
+            int temp;
+
+            for (m = 1; m < length; m++)
+            {
+                temp = lista[m];
+                a = m - 1;
+
+                while (a >= 0 && lista[a] > temp)
+
+                {
+                    lista[a + 1] = lista[a];
+                    a--;
+                }
+                lista[a + 1] = temp;
+            }
+        }
     }
 }
 
