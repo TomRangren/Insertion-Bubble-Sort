@@ -12,7 +12,7 @@ namespace Sorting_v2
             sw.Start();
             Bubbelsortera(bubble);
             sw.Stop();
-            Console.WriteLine(sw.Elapsed.TotalSeconds);
+            Console.WriteLine(sw.Elapsed.TotalSeconds+" Sekunder tog det!");
         }
         public static void Bubbelsortera(int[] lista)
         {
@@ -28,21 +28,42 @@ namespace Sorting_v2
                     }
                 }
             }
-           /* for (int i = 0; i < lista.Length; i++)
+            for (int i = 0; i < lista.Length; i++)
             {
                 Console.WriteLine(lista[i]);
-            }*/
+            }
         }
         public static int[] randomNumbers()
         {
             Random random = new Random();
-            int[] numbers = new int[10];
+            int[] numbers = new int[10000];
             for (int i = 0; i < numbers.Length; i++)
                 numbers[i] = random.Next(numbers.Length);
             return numbers;
         }
+        public static void InsertionSort(int[] lista)
+        {
+            int a, t;
+            int length = lista.Length; if (length < 2) return;
+            int temp;
+
+            for (t = 1; t < length; t++)
+            {
+                temp = lista[t];
+                a = t - 1;
+
+                while (a >= 0 && lista[a] > temp)
+
+                {
+                    lista[a + 1] = lista[a];
+                    a--;
+                }
+                lista[a + 1] = temp;
+            }
+        }
     }
 }
-    
- 
-   
+
+
+
+
