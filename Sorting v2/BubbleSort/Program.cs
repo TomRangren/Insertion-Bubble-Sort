@@ -28,10 +28,10 @@ namespace BubbleSort
                     }
                 }
             }
-            for (int i = 0; i < lista.Length; i++)
+            /*for (int i = 0; i < lista.Length; i++)
             {
                 Console.WriteLine(lista[i]);
-            }
+            }*/
         }
         public static int[] randomNumbers()
         {
