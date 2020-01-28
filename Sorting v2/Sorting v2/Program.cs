@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Sorting_v2
+namespace BubbleSort
 {
     class Program
     {
@@ -36,30 +36,10 @@ namespace Sorting_v2
         public static int[] randomNumbers()
         {
             Random random = new Random();
-            int[] numbers = new int[10000];
+            int[] numbers = new int[100000];
             for (int i = 0; i < numbers.Length; i++)
                 numbers[i] = random.Next(numbers.Length);
             return numbers;
-        }
-        public static void InsertionSort(int[] lista)
-        {
-            int a, t;
-            int length = lista.Length; if (length < 2) return;
-            int temp;
-
-            for (t = 1; t < length; t++)
-            {
-                temp = lista[t];
-                a = t - 1;
-
-                while (a >= 0 && lista[a] > temp)
-
-                {
-                    lista[a + 1] = lista[a];
-                    a--;
-                }
-                lista[a + 1] = temp;
-            }
         }
     }
 }
