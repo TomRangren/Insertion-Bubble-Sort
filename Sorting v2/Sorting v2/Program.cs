@@ -12,7 +12,7 @@ namespace InsertionSort
             sw.Start();
             Insertion(InsertionSort);
             sw.Stop();
-            Console.WriteLine(sw.Elapsed.TotalSeconds+" Sekunder tog det!");
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " Sekunder tog det!");
         }
         public static int[] randomNumbers()
         {
@@ -41,10 +41,10 @@ namespace InsertionSort
                 }
                 lista[a + 1] = temp;
             }
-            for (int i = 0; i < lista.Length; i++)
+            /*for (int i = 0; i < lista.Length; i++)
             {
                 Console.WriteLine(lista[i]);
-            }
+            }*/
         }
     }
 }
